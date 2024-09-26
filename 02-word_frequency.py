@@ -18,13 +18,18 @@ Hints:
 """
 
 import sys
+import re
+pattern = r'[\[\].,():;!?\"*_“”]'
 
 def word_frequency(text):
     frequencies = {} # Dictionary to store word frequencies
+    words = text.lower().split()
+    # print(words)
+    for word in words:
+        word = re.sub(pattern, '', word)
+        frequencies[word] = frequencies.get(word, 0) + 1
 
-    # Your code here
-    
-    return frequencies
+    return {word: frequencies[word] for word in sorted(frequencies)}
 
 # Scaffold for opening a file and running word_frequency() on the contents
 if __name__ == "__main__":
