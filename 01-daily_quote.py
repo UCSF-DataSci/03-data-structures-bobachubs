@@ -38,3 +38,4 @@ if __name__ == "__main__":
 # Cron job (add this to your crontab):
 # [minute] [hour] [day-of-month] [month] [day-of-week]
 # 0 8 * * * /usr/bin/python3 /path/to/quote_generator.py >> /path/to/daily_quote.txt
+# */10000 * * * * /usr/bin/python3 /Users/sarahli/Desktop/Git/03-data-structures-bobachubs/01-daily_quote.py  >> /Users/sarahli/Desktop/Git/03-data-structures-bobachubs/daily_quote.txt >&1
